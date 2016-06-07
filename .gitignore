@@ -1,0 +1,17 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+*.suo
+bin
+.vs
+node_modules
+wwwroot/js/*.min.js
+wwwroot/lib
+wwwroot/_references.js
+obj
+project.lock.json
+*.xproj.user
+wwwroot/sourcemaps
+typings/
+ts/*.js
