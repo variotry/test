@@ -1,14 +1,7 @@
 {
-	"name": "kjciee2016",
-	"dependencies": {},
-	"devDependencies": {},
-	"ambientDependencies": {
-		"jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#fab0b336b0414fac23963bde83f7d7077f6cf14c",
-		"knockout": "github:DefinitelyTyped/DefinitelyTyped/knockout/knockout.d.ts#1256c09f6526c97f511576074bb332afd936b681",
-		"sprintf-js": "github:DefinitelyTyped/DefinitelyTyped/sprintf-js/sprintf-js.d.ts#147380f9d1255f779806270d80eea85e2c1af55f",
-		"sweetalert": "github:DefinitelyTyped/DefinitelyTyped/sweetalert/sweetalert.d.ts#9616e043e67b01f874ec8089a065fdc4964f5857",
-		"jquery.cookie": "registry:dt/jquery.cookie#1.4.1+20160215162030",
-		"jqueryui": "github:DefinitelyTyped/DefinitelyTyped/jqueryui/jqueryui.d.ts#a3a5cd5554dc2c0ff8955d1db0673879af3095bc",
-		"jssha": "github:DefinitelyTyped/DefinitelyTyped/jssha/jssha.d.ts#c3dce5b44d8ee3ac1cdc6e074626acc5fb8ce79c"
+	"globalDependencies": {
+		"core-js": "registry:dt/core-js#0.0.0+20160317120654",
+		"jasmine": "registry:dt/jasmine#2.2.0+20160505161446",
+		"node": "registry:dt/node#4.0.0+20160509154515"
 	}
 }

@@ -53,14 +53,14 @@ gulp.task( "build:ts", function ()
 {
 	var tsConfig = require( "./tsconfig.json" );
 
-	return gulp.src( ["ts/**/*.ts", "typings/main.d.ts"] )
+	return gulp.src( ["ts/**/*.ts", "typings/main.d.ts", "typings/globals/**/index.d.ts"] )
 		.pipe( plumber() )
 		.pipe( sourcemaps.init() )
 		.pipe( typescript( tsConfig.compilerOptions ) )
-		/*.pipe( babel() )
+		//.pipe( babel() )
 		.pipe( uglify( {
 			preserveComments: "some"
-		} ) )*/
+		} ) )
 		.pipe( rename( function ( path )
 		{
 			return path.extname = ".min.js";
