@@ -11,6 +11,7 @@ var typescript = require( "gulp-typescript" ),
 	sourcemaps = require( "gulp-sourcemaps" ),
 	rename = require( "gulp-rename" ),
 	babel = require( "gulp-babel" );
+var sequence = require( "gulp-sequence" );
 
 var webroot = "./wwwroot/";
 
@@ -72,4 +73,21 @@ gulp.task( "build:ts", function ()
 gulp.task( "watch:ts", ["build:ts"], function ()
 {
 	return gulp.watch( "ts/**/*.ts", ["build:ts"] );
+} );
+
+gulp.task( "copy:angular", callback =>
+{
+	var packages = ["@angular", "rxjs"];
+	var taskNames = [];
+	packages.forEach( p =>
+	{
+		var task = "private_angular:" + p;
+		taskNames.push( task );
+		gulp.task( task, () =>
+		{
+			return gulp.src( "node_modules/" + p + "/**/*.js" )
+					.pipe( gulp.dest( "wwwroot/lib/" + p ) );
+		} );
+	} );
+	return sequence( taskNames, callback );
 } );
